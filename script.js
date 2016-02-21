@@ -51,22 +51,18 @@ for (var i = 0; i <= 80; i++){
 
 var divies = document.getElementsByTagName('div');
 
-for (var x = 0; x <= 8; x = x + 2){
-  var divs = divies[x];
-  divs.style.backgroundColor = 'rgba(255,230,242,1)';
-}
-for (var x = 1; x <= 8; x = x + 2){
-  var divs = divies[x];
-  divs.style.backgroundColor = 'rgba(255,204,179,1)';
-}
-
-for (var i = 0; i <= 80; i = i + 9){
+for (var i = -9; i <= 80; i = i + 9){
   var r = rOne();
-  var b = bOne();
   var g = gOne();
-  var b2 = bTwo();
+  var b = bOne();
   var g2 = gTwo();
+  var b2 = bTwo();
   for (var x = i + 9; x <= i + 18; x = x + 2){
+    r = r - 10;
+    g = g - 20;
+    b = b - 10;
+    g2 = g2 - 20;
+    b2 = b2 - 10;
     var divs = divies[x];
     divs.style.backgroundColor = 'rgba(' + r + ',' + g + ',' + b + ',1)'
   }
